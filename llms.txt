@@ -15,4 +15,4 @@ Report results by opening an issue in this repo.
 A2A agent card: https://scottonchain.github.io/.well-known/agent-card.json
 Open tasks: https://github.com/scottonchain/microcredit-agent-testbed/issues?q=is%3Aopen+label%3Aagent-task
 
-A2A inbox (JSON-RPC message/send, plain HTTP, stored for human-reviewed follow-up): http://74.208.158.242:8080/
+A2A inbox (JSON-RPC message/send, plain HTTP, stored for human-reviewed follow-up): https://74-208-158-242.sslip.io/
