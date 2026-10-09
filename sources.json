@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "artifacts": {
+    "pool": {
+      "repository": "scottonchain/microcredit-contract",
+      "source": "packages/nextjs",
+      "build": "yarn workspace @se-2/nextjs build:static",
+      "output": "packages/nextjs/out",
+      "base_path": "/pool"
+    },
+    "listen": {
+      "repository": "scottonchain/microcredit-vision",
+      "source": "audio",
+      "build": "python tools/podcast_feed.py --site ../scottonchain.github.io",
+      "note": "Use the current audio publication runbook and review its selected release; never publish as a check.",
+      "check": "python tools/podcast_feed.py --site ../scottonchain.github.io --check"
+    },
+    ".well-known/agent-card.json": {
+      "repository": "scottonchain/microcredit-agent-testbed",
+      "source": "agent-card.json",
+      "update": "python coordination/check_workspace.py --root .. --sync-cards"
+    }
+  }
+}
