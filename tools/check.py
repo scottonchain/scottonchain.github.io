@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root, testbed=None):
     root = Path(root).resolve()
     errors = []
-    for relative in ("pool/index.html", "listen/index.html", "listen/feed.xml", ".well-known/agent-card.json"):
+    for relative in ("pool/index.html", "listen/index.html", "listen/feed.xml", ".well-known/agent-card.json", ".well-known/agent.json"):
         if not (root / relative).is_file():
             errors.append("Missing release file: " + relative)
     if errors:
@@ -20,6 +20,8 @@ def check(root, testbed=None):
     card = json.loads((root / ".well-known/agent-card.json").read_text())
     if card.get("chain", {}).get("chainId") != 84532:
         errors.append("The published card must identify Base Sepolia")
+    if (root / ".well-known/agent.json").read_bytes() != (root / ".well-known/agent-card.json").read_bytes():
+        errors.append("Legacy agent.json differs from agent-card.json")
     if testbed:
         source = Path(testbed) / "agent-card.json"
         if (root / ".well-known/agent-card.json").read_bytes() != source.read_bytes():

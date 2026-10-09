@@ -16,6 +16,7 @@
       "check": "python tools/podcast_feed.py --site ../scottonchain.github.io --check"
     },
     ".well-known/agent-card.json": {
+      "aliases": [".well-known/agent.json"],
       "repository": "scottonchain/microcredit-agent-testbed",
       "source": "agent-card.json",
       "update": "python coordination/check_workspace.py --root .. --sync-cards"
