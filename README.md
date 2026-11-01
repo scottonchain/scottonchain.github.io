@@ -1,5 +1,7 @@
 # Microcredit delivery site
 
+Current project direction: [research and publishing phase](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/RESEARCH_PHASE_20261101.md) (November 1, 2026). Omnequa website/news and GitHub blog synchronization belongs to the existing site/article owners. This repository remains the generated app/audio delivery source below; do not duplicate the native website or infer a chain deployment from editorial authority.
+
 This repository serves the project's published app and audio at
 [scottonchain.github.io](https://scottonchain.github.io). It contains generated
 releases; maintain the code in the upstream repositories listed in `sources.json`.
