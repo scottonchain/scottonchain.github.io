@@ -19,3 +19,7 @@
 !.env.*.example
 !.env.*.sample
 !.env.*.template
+
+# Python bytecode from running the guard tests must not be committed.
+__pycache__/
+*.pyc
